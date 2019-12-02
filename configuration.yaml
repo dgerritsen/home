@@ -10,14 +10,15 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Amsterdam
   customize: !include customize.yaml
-  updater:
-    reporting: false
-  sun:
-  conversation:
-  config:
-  person:
-  system_health:
-  mobile_app:
+
+updater:
+  reporting: false
+sun:
+conversation:
+config:
+person:
+system_health:
+mobile_app:
 
 
 #################################################################
