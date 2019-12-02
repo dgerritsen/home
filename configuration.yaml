@@ -1,0 +1,43 @@
+#################################################################
+## Home Assistant Core
+#################################################################
+
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
+  unit_system: metric
+  time_zone: Europe/Amsterdam
+  customize: !include customize.yaml
+  updater:
+    reporting: false
+  sun:
+  conversation:
+  config:
+  person:
+  system_health:
+  mobile_app:
+
+
+#################################################################
+## Components
+#################################################################
+
+tts:
+  - platform: google_translate
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky_apikey
+    mode: daily
+    name: "Winkel"
+
+
+#################################################################
+## Includes
+#################################################################
+
+zone: !include zones.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
